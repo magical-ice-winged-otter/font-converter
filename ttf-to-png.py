@@ -24,13 +24,13 @@ def draw_char(draw: ImageDraw, character: str, x: int, y: int):
     """
     if len(character) != 1:
         sys.exit()
-    
+    drawX = x - 1
     drawY = y + 1
 
     rectangle = (x, drawY, x + 4, drawY + 11)
     
     draw.rectangle(rectangle, fill=LETTER_BACKGROUND_COLOR)
-    draw.text((x, drawY), character, font=font, fill=LETTER_COLOR)
+    draw.text((drawX, drawY), character, font=font, fill=LETTER_COLOR)
 
 
 
